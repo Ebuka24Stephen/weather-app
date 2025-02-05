@@ -28,7 +28,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 API_KEY = env('API_KEY')
 
-ALLOWED_HOSTS = ['weather-app.onrender', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['weather-app-ai6p.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
