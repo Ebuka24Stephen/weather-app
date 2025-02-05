@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; padding: 20px; margin: 0;">
+
+    <form action="" 
+          style="background: white; padding: 20px; border-radius: 8px; 
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+                 display: inline-block; max-width: 90%; width: 400px;">
+        
+        {% csrf_token %}
+        
+        <input type="text" name="city" placeholder="Enter city name" 
+               style="padding: 10px; width: calc(100% - 20px); border: 1px solid #ccc; 
+                      border-radius: 5px; margin-bottom: 10px;">
+        
+        <button style="padding: 10px 15px; background-color: #007BFF; color: white; 
+                       border: none; border-radius: 5px; cursor: pointer; width: 100%;">
+            Get Weather
+        </button>
+
+        <ul style="list-style-type: none; padding: 0; margin-top: 20px;">
+            <li style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">{{weather_data.city}}</li>
+            <li style="font-size: 16px; margin-bottom: 5px;">Temperature: {{weather_data.temperature}}°C</li>
+            <li style="font-size: 16px; margin-bottom: 5px;">Description: {{weather_data.description}}</li>
+            <li style="font-size: 16px;">Wind Speed: {{weather_data.wind}} km/h</li>
+        </ul>
+    </form>
+
+</body>
+</html>
